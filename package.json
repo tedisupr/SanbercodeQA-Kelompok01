@@ -2,7 +2,7 @@
   "name": "sanbercodeqa-kelompok01",
   "version": "1.0.0",
   "description": "Final Project Wit Cypress.io",
-  "main": "Cypress",
+  "main": "index.js",
   "scripts": {
     "test": "Cypress"
   },
