@@ -10,6 +10,9 @@
 //
 //
 // -- This is a parent command --
+
+import baseLogin from "./pageObject/baseLogin.cy"
+
 Cypress.Commands.add('ketik', (locator, value) => {
     cy.get(locator)
     .type(value)
@@ -19,6 +22,26 @@ Cypress.Commands.add('klik', (locator) => {
     cy.get(locator)
     .click()
 })
+
+Cypress.Commands.add('login', () => {
+  const BaseLogin = new baseLogin()
+  cy.visit('')
+  BaseLogin.inputUsername()
+  BaseLogin.inputPassword()
+  BaseLogin.klikBtnLogin()
+  BaseLogin.validasiBradcrumb()
+  BaseLogin.validasiUrl()
+})
+
+// Cypress.Tasks.add('runCypress', ({ spec }) => {
+//   const cypress = require('cypress');
+//   const options = {
+//     spec,
+//     headless: true
+// }});
+
+//   return cypress.run(options);
+// });
 
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
