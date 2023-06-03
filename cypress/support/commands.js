@@ -20,6 +20,12 @@ Cypress.Commands.add('klik', (locator) => {
     .click()
 })
 
+// Cypress.Commands.select('select', (locator, value) => {
+//     cy.get(locator)
+//     .select(value)
+//     .click()
+// })
+
 
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })

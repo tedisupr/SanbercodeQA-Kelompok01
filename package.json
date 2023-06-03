@@ -4,7 +4,7 @@
   "description": "Final Project Wit Cypress.io",
   "main": "index.js",
   "scripts": {
-    "test": "Cypress"
+    "user-addUser": "npx cypress run --spec 'cypress/e2e/menuAdmin/userManagement/user-addUser/*cy.js'"
   },
   "author": "Kelompok 01",
   "license": "ISC",
