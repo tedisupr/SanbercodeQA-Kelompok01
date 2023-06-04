@@ -20,7 +20,7 @@ Cypress.Commands.add('ketik', (locator, value) => {
 
 Cypress.Commands.add('klik', (locator) => {
     cy.get(locator)
-    .click()
+    .click({force: true})
 })
 
 Cypress.Commands.add('login', () => {

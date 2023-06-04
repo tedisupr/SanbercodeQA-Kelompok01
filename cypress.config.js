@@ -12,7 +12,6 @@ module.exports = defineConfig({
       })
       // implement node event listeners here
     },
-      defaultCommandTimeout: 5000,
       experimentalEventsPolyfill: true,
       chromeWebSecurity: false
   },
