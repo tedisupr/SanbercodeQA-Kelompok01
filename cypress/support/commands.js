@@ -35,7 +35,7 @@ Cypress.Commands.add('login', () => {
 
 // Cypress.Commands.add('checkbox',(locator)=>{
 //   cy.get(locator)
-//   .('input[type="checkbox"]')
+//   .input('input[type="checkbox"]')
 //   .check();
 // })
 
