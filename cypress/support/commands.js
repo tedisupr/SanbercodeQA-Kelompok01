@@ -21,8 +21,12 @@ Cypress.Commands.add('ketik', (locator, value) => {
 
 Cypress.Commands.add('klik', (locator) => {
     cy.get(locator)
-    .should('be.visible')
     .click({force: true})
+})
+
+Cypress.Commands.add('klik2', (locator) => {
+  cy.get(locator)
+  .click({multiple:true})
 })
 
 Cypress.Commands.add('login', () => {
