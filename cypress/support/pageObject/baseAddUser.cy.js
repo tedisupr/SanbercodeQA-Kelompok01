@@ -1,26 +1,49 @@
-const loginData = require('../../fixtures/login/loginData.json')
+const addUser = require('../../fixtures/addUser/addUser.json')
 
-class baseLogin{
-    username=':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input'
-    password=':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input'
-    buttonLogin='.oxd-button'
-    breadCrumb='.oxd-topbar-header-breadcrumb > .oxd-text'
-    urlDashboar='web/index.php/dashboard/index'
+class baseAddUser{
+    menuAdmin=':nth-child(1) > .oxd-main-menu-item'
+    addUser='.orangehrm-header-container > .oxd-button'
+    selectRole=':nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text'
+    inputEmployee='.oxd-autocomplete-text-input > input' //dari json cari nama karyawan
+    selectStatus=':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text'
+    username=':nth-child(4) > .oxd-input-group > :nth-child(2) > .oxd-input'
+    password='.user-password-cell > .oxd-input-group > :nth-child(2) > .oxd-input'
+    confrpass=':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input'
+    btnSave='.oxd-button--secondary'
+    btnCancel='.oxd-button--ghost'
 
+    aksesMenuAdmin(){
+        cy.klik(this.menuAdmin)
+    }
+    aksesAddUser(){
+        cy.klik(this.addUser)
+    }
+    pilihRole(){
+        cy.klik(this.selectRole)
+        cy.contains('ESS').click()
+    }
+    cariEmployee(){
+        cy.ketik(this.inputEmployee, addUser.cariPegawai)
+        cy.contains('Alice Duval').click()
+    }
+    pilihStatus(){
+        cy.klik(this.selectStatus)
+        cy.contains('Disable').click()
+    }
     inputUsername(){
-        cy.ketik(this.username, loginData.username)
+        cy.ketik(this.username, addUser.username)
     }
     inputPassword(){
-        cy.ketik(this.password, loginData.password)
+        cy.ketik(this.password, addUser.pass)
     }
-    klikBtnLogin(){
-        cy.klik(this.buttonLogin)
+    inputConfrm(){
+        cy.ketik(this.confrpass, addUser.conf)
     }
-    validasiBradcrumb(){
-        cy.get(this.breadCrumb).should('be.visible')
+    simpanData(){
+        cy.klik(this.btnSave)
     }
-    validasiUrl(){
-        cy.url().should('include', this.urlDashboar)
+    cancel(){
+        cy.klik(this.btnCancel)
     }
-}
-export default baseLogin
+    }
+export default baseAddUser
