@@ -33,9 +33,11 @@ Cypress.Commands.add('login', () => {
   BaseLogin.validasiUrl()
 })
 
-Cypress.Commands.add('checkbox',(locator)=>{
-  cy.get(locator)
-})
+// Cypress.Commands.add('checkbox',(locator)=>{
+//   cy.get(locator)
+//   .('input[type="checkbox"]')
+//   .check();
+// })
 
 // Cypress.Tasks.add('runCypress', ({ spec }) => {
 //   const cypress = require('cypress');
