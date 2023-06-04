@@ -2,7 +2,7 @@ class baseDeletelocation{
     btnHps=':nth-child(1) > .oxd-table-row > :nth-child(7) > .oxd-table-cell-actions > :nth-child(1) > .oxd-icon'
     btnHpsSelect='.orangehrm-horizontal-padding > div > .oxd-button'
     confrmHps='.oxd-button--label-danger'
-    checkBoxHps=':nth-child(1) > .oxd-table-row > :nth-child(1) > .oxd-table-card-cell-checkbox > .oxd-checkbox-wrapper > label > .oxd-checkbox-input > .oxd-icon'
+    checkBoxHps='oxd-checkbox-input oxd-checkbox-input--active --label-right oxd-checkbox-input'
     allCheckBoxHps='.oxd-table-row > :nth-child(1) > .oxd-checkbox-wrapper > label > .oxd-checkbox-input > .oxd-icon'
     
     del1(){
@@ -12,7 +12,7 @@ class baseDeletelocation{
         cy.klik(this.confrmHps)
     }
     del1Selected(){
-        cy.klik(this.checkBoxHps)
+        cy.checkbox(this.del1Selected)
     }
     del2(){
         cy.klik(this.btnHpsSelect)
