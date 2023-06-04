@@ -33,6 +33,10 @@ Cypress.Commands.add('login', () => {
   BaseLogin.validasiUrl()
 })
 
+Cypress.Commands.add('kosongkan', (locator) => {
+  cy.get(locator)
+  .clear()
+})
 // Cypress.Commands.add('checkbox',(locator)=>{
 //   cy.get(locator)
 //   .input('input[type="checkbox"]')

@@ -20,14 +20,29 @@ class baseEditEmp{
     menuPersonal(){
         cy.klik(this.personalDetils)
     }
+    clearNamaDepan(){
+        cy.kosongkan(this.fldFirstName)
+    }
     editNamaDepan(){
         cy.ketik(this.fldFirstName, editEmpData.firstname)
     } 
+    clearNamaTengah(){
+        cy.kosongkan(this.fldMiddleName)
+    }
     editNamaTengah(){
         cy.ketik(this.fldMiddleName, editEmpData.middlename)
     }  
+    clearNamaBelakang(){
+        cy.kosongkan(this.fldLastname)
+    }
     editNamaBelakang(){
         cy.ketik(this.fldLastname, editEmpData.lastname)
+    }
+    namaPanggilan(){
+        cy.ketik(this.nikName, editEmpData.nikName)
+    }
+    idPegawai(){
+        cy.ketik(this.empId, editEmpData.pegawaiId)
     }
     simpanData(){
         cy.klik(this.btnSave)
