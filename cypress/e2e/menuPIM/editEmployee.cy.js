@@ -1,7 +1,8 @@
 import baseEditEmp from "../../support/pageObject/baseEditEmployee.cy"
 
-describe('edit pegawai', () => {
-  const BaseEditEmp = new baseEditEmp
+describe('Edit Employee', () => {
+  const BaseEditEmp = new baseEditEmp()
+
   it('edit all field', () => {
     cy.login ()
     BaseEditEmp.AksesmenuPIM()
@@ -13,8 +14,59 @@ describe('edit pegawai', () => {
     BaseEditEmp.editNamaTengah()
     BaseEditEmp.clearNamaBelakang()
     BaseEditEmp.editNamaBelakang()
+    BaseEditEmp.clearNamaPanggilan()
     BaseEditEmp.namaPanggilan()
+    BaseEditEmp.clearID()
     BaseEditEmp.idPegawai()
     BaseEditEmp.simpanData()
   })
+
+  it('kosongkan semua field',()=>{
+    cy.login ()
+    BaseEditEmp.AksesmenuPIM()
+    BaseEditEmp.editEmp()
+    BaseEditEmp.menuPersonal()
+    BaseEditEmp.clearNamaDepan()
+    BaseEditEmp.clearNamaBelakang()
+    BaseEditEmp.simpanData()
+  })
+
+  it('batal ubah', () => {
+    cy.login ()
+    BaseEditEmp.AksesmenuPIM()
+    BaseEditEmp.editEmp()
+    BaseEditEmp.menuPersonal()
+    BaseEditEmp.clearNamaDepan()
+    BaseEditEmp.editNamaDepan()
+    BaseEditEmp.clearNamaTengah()
+    BaseEditEmp.editNamaTengah()
+    BaseEditEmp.clearNamaBelakang()
+    BaseEditEmp.editNamaBelakang()
+    BaseEditEmp.clearNamaPanggilan()
+    BaseEditEmp.namaPanggilan()
+    BaseEditEmp.clearID()
+    BaseEditEmp.idPegawai()
+    BaseEditEmp.MenuLain()
+  })
+
+  it('invalid id other & driver license', () => {
+    cy.login ()
+    BaseEditEmp.AksesmenuPIM()
+    BaseEditEmp.editEmp()
+    BaseEditEmp.menuPersonal()
+    BaseEditEmp.clearNamaDepan()
+    BaseEditEmp.editNamaDepan()
+    BaseEditEmp.clearNamaTengah()
+    BaseEditEmp.editNamaTengah()
+    BaseEditEmp.clearNamaBelakang()
+    BaseEditEmp.editNamaBelakang()
+    BaseEditEmp.clearNamaPanggilan()
+    BaseEditEmp.namaPanggilan()
+    BaseEditEmp.clearID()
+    BaseEditEmp.idPegawai()
+    BaseEditEmp.OtherId()
+    BaseEditEmp.DriverLicense()
+    BaseEditEmp.simpanData()
+  })
+
 })

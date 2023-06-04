@@ -10,7 +10,12 @@ class baseEditEmp{
     nikName=':nth-child(1) > .oxd-grid-3 > .oxd-grid-item > .oxd-input-group > :nth-child(2) > .oxd-input'
     empId=':nth-child(3) > :nth-child(1) > :nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-input'
     btnSave=':nth-child(1) > .oxd-form > .oxd-form-actions > .oxd-button'
-
+    menuLain=':nth-child(1) > .oxd-main-menu-item'
+    otherId=':nth-child(3) > :nth-child(1) > :nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input'
+    driverLicense=':nth-child(3) > :nth-child(2) > :nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-input'
+    
+    
+    
     AksesmenuPIM(){
         cy.klik(this.menuPIM)
     }
@@ -20,21 +25,12 @@ class baseEditEmp{
     menuPersonal(){
         cy.klik(this.personalDetils)
     }
-    clearNamaDepan(){
-        cy.kosongkan(this.fldFirstName)
-    }
     editNamaDepan(){
         cy.ketik(this.fldFirstName, editEmpData.firstname)
     } 
-    clearNamaTengah(){
-        cy.kosongkan(this.fldMiddleName)
-    }
     editNamaTengah(){
         cy.ketik(this.fldMiddleName, editEmpData.middlename)
-    }  
-    clearNamaBelakang(){
-        cy.kosongkan(this.fldLastname)
-    }
+    } 
     editNamaBelakang(){
         cy.ketik(this.fldLastname, editEmpData.lastname)
     }
@@ -44,9 +40,35 @@ class baseEditEmp{
     idPegawai(){
         cy.ketik(this.empId, editEmpData.pegawaiId)
     }
+    OtherId(){
+        cy.ketik(this.otherId, editEmpData.invalidID)
+    }
+    DriverLicense(){
+        cy.ketik(this.driverLicense, editEmpData.invalidDriver)
+    }
     simpanData(){
         cy.klik(this.btnSave)
     }
+    MenuLain(){
+        cy.klik(this.menuLain)
+    }
+    //clear
+    clearNamaDepan(){
+        cy.kosongkan(this.fldFirstName)
+    }
+    clearNamaTengah(){
+        cy.kosongkan(this.fldMiddleName)
+    }
+    clearNamaBelakang(){
+        cy.kosongkan(this.fldLastname)
+    }
+    clearNamaPanggilan(){
+        cy.kosongkan(this.nikName)
+    }
+    clearID(){
+        cy.kosongkan(this.empId)
+    }
+
 }
 
 export default baseEditEmp

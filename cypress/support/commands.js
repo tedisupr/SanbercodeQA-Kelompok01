@@ -15,11 +15,13 @@ import baseLogin from "./pageObject/baseLogin.cy"
 
 Cypress.Commands.add('ketik', (locator, value) => {
     cy.get(locator)
+    .should('be.visible')
     .type(value)
 })
 
 Cypress.Commands.add('klik', (locator) => {
     cy.get(locator)
+    .should('be.visible')
     .click({force: true})
 })
 

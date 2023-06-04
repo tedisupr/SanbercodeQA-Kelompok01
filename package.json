@@ -4,7 +4,8 @@
   "description": "Final Project Wit Cypress.io",
   "main": "index.js",
   "scripts": {
-    "organization": "npx cypress run --spec 'cypress/e2e/menuAdmin/organization/*cy.js'"
+    "organization": "npx cypress run --spec 'cypress/e2e/menuAdmin/organization/*cy.js'",
+    "employ": "npx cypress run --spec 'cypress/e2e/menuPIM/editEmployee.cy.js'"
   },
   "author": "Kelompok 01",
   "license": "ISC",
