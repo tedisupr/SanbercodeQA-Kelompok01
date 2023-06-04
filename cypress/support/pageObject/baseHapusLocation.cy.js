@@ -4,7 +4,7 @@ class baseHapuslocation{
     menuOrganization=':nth-child(3) > .oxd-topbar-body-nav-tab-item'
     menuLocation='.oxd-dropdown-menu > :nth-child(2)'
     btnHapusLocation=':nth-child(2) > .oxd-table-row > :nth-child(7) > .oxd-table-cell-actions > :nth-child(1) > .oxd-icon'
-    confirmHapus='.oxd-button--label-danger'
+  //  confirmHapus='.oxd-button--label-danger'
     checkBox1='.oxd-table-row > :nth-child(1) > .oxd-checkbox-wrapper > label > .oxd-checkbox-input > .oxd-icon'
     btnHapusDanger='.orangehrm-modal-footer > .oxd-button--label-danger'
     hapusCheckbox='.orangehrm-horizontal-padding > div > .oxd-button'
