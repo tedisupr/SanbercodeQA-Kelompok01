@@ -35,8 +35,6 @@ Cypress.Commands.add('login', () => {
 
 Cypress.Commands.add('checkbox',(locator)=>{
   cy.get(locator)
-  .input('input[type="checkbox"]')
-  .check()
 })
 
 // Cypress.Tasks.add('runCypress', ({ spec }) => {
