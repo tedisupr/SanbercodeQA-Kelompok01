@@ -24,7 +24,7 @@ class baseAddUser{
     }
     cariEmployee(){
         cy.ketik(this.inputEmployee, addUser.cariPegawai)
-        cy.contains('Alice Duval').click()
+        cy.contains('Anthony Nolan').click()
     }
     pilihStatus(){
         cy.klik(this.selectStatus)

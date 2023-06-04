@@ -1,9 +1,9 @@
 import baseLogin from "../../support/pageObject/baseLogin.cy"
 
-describe('Fungsionalitas Login', () => {
+describe('M-001 - Modul Login & Logout', () => {
   const BaseLogin = new baseLogin()
 
-  it('login_berhasil', () => {
+  it('M-001.1: Berhasil login', () => {
     cy.visit('')
     BaseLogin.inputUsername()
     BaseLogin.inputPassword()
