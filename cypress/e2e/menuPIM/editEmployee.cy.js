@@ -1,9 +1,9 @@
 import baseEditEmp from "../../support/pageObject/baseEditEmployee.cy"
 
-describe('Edit Employee', () => {
+describe('M-012: Modul PIM - Edit Employee', () => {
   const BaseEditEmp = new baseEditEmp()
 
-  it('edit all field', () => {
+  it('M-012.001: Edit semua data personal', () => {
     cy.login ()
     BaseEditEmp.AksesmenuPIM()
     BaseEditEmp.editEmp()
@@ -21,7 +21,7 @@ describe('Edit Employee', () => {
     BaseEditEmp.simpanData()
   })
 
-  it('kosongkan semua field',()=>{
+  it('M-012.008: Kosongkan semua data',()=>{
     cy.login ()
     BaseEditEmp.AksesmenuPIM()
     BaseEditEmp.editEmp()
@@ -31,7 +31,7 @@ describe('Edit Employee', () => {
     BaseEditEmp.simpanData()
   })
 
-  it('batal ubah', () => {
+  it('M-012.009: Batal ubah', () => {
     cy.login ()
     BaseEditEmp.AksesmenuPIM()
     BaseEditEmp.editEmp()
@@ -49,7 +49,7 @@ describe('Edit Employee', () => {
     BaseEditEmp.MenuLain()
   })
 
-  it('invalid id other & driver license', () => {
+  it('M-012.005, M-012.006, M-012.007 : Karaketer lebih dari seharusnya', () => {
     cy.login ()
     BaseEditEmp.AksesmenuPIM()
     BaseEditEmp.editEmp()
