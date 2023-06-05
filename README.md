@@ -26,5 +26,5 @@ https://docs.google.com/spreadsheets/d/1r1BM04JTZ1wgUQDSUwlw3eNcCq0z7JurY4N4boas
  <tr><td>13</td><td>Modul  PIM - Employee List</td><td>A A JE Veggy Priyanka</td></tr>
  <tr><td>14</td><td>Modul  PIM - Add Employee</td><td>A A JE Veggy Priyanka</td></tr>
  <tr><td>15</td><td>Modul  PIM - Edit Employee</td><td>Tedi Suprianto</td></tr>
- <tr><td>16</td><td>Modul  PIM - Delete Employee</td><td>A A JE Veggy Priyanka</td></tr>
+ <tr><td>16</td><td>Modul  PIM - Delete Employee</td><td>Tedi Suprianto</td></tr>
 </tbody></table>
