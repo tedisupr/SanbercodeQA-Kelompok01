@@ -6,6 +6,7 @@ class baseLogin{
     buttonLogin='.oxd-button'
     breadCrumb='.oxd-topbar-header-breadcrumb > .oxd-text'
     urlDashboar='web/index.php/dashboard/index'
+    urlLogin='https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'
 
     inputUsername(){
         cy.ketik(this.username, loginData.username)
@@ -21,6 +22,9 @@ class baseLogin{
     }
     validasiUrl(){
         cy.url().should('include', this.urlDashboar)
+    }
+    validasipagelogin(){
+        cy.url().should('include', this.urlLogin)
     }
 }
 export default baseLogin
